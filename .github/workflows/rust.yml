@@ -32,11 +32,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Add Cargo-Tauri 
+        run: cargo install cargo-tauri
       - name: Build
-        run: cd src-tauri && cargo build --verbose
+        run: cargo-tauri build
       - uses: actions/upload-artifact@v4.3.3
         with:
           # Artifact name
           name: Tauri_Artifacts_Windows # optional, default is artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: 'D:\a\tauri-testing\tauri-testing\src-tauri\target\'
+          path: 'D:\a\tauri-testing\tauri-testing\'
