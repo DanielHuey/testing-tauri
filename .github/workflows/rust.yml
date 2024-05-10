@@ -42,6 +42,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
             ${{ runner.os }}-cargo
+          save-always: true
       - name: Add Cargo-Tauri 
         run: cargo install tauri-cli
       - name: Build
