@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Add Cargo-Tauri 
-        run: cargo install cargo-tauri
+        run: cargo install tauri-cli
       - name: Build
         run: cargo-tauri build
       - uses: actions/upload-artifact@v4.3.3
