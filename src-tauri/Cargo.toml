@@ -1,11 +1,8 @@
 [package]
-name = "testing-tauri"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "TauriApp"
+authors = ["Agani Daniel S.<aganidanielstrong@gmail.com>"]
+version = "0.0.1"
+description = "Hi Tauri"
 
 [build-dependencies]
 tauri-build = { version = "1", features = [] }
@@ -18,3 +15,7 @@ serde_json = "1"
 [features]
 # This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
 custom-protocol = ["tauri/custom-protocol"]
+
+[[bin]]
+name = "TauriApp"
+path = "src/main.rs"

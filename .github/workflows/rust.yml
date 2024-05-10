@@ -33,8 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: cd src-tauri
-          | cargo build --verbose
+        run: cd src-tauri && cargo build --verbose
       - uses: actions/upload-artifact@v4.3.3
         with:
           # Artifact name
