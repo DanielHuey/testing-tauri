@@ -36,20 +36,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: ⚡ Cache
         id: cache-files
         uses: actions/cache@v4
         with:
           path: |
-            ~/.cargo
             src-tauri/target
+            node_modules
           key: ${{ runner.os }}-cargo
           save-always: true
       - name: Add Cargo-Tauri
         if: steps.cache-files.outputs.cache-hit != 'true'
-        run: cargo install tauri-cli
+        run: npm i --save-dev @tauri-apps/cli
       - name: Build
-        run: cargo-tauri build
+        run: tauri build
       - uses: actions/upload-artifact@v4.3.3
         with:
           # Artifact name
