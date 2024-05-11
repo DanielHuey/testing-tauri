@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Hi Tauri",
   "scripts": {
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "dev" : "npm run tauri dev",
+    "build" : "npm run tauri build",
   },
   "keywords": [
     "tauri",
@@ -11,7 +13,7 @@
   ],
   "author": "Agani Daniel",
   "license": "MIT",
-  "scripts": {
-    "tauri": "tauri"
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.13"
   }
 }
