@@ -1,0 +1,17 @@
+{
+  "name": "testing-tauri",
+  "version": "0.1.0",
+  "description": "Hi Tauri",
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "keywords": [
+    "tauri",
+    "electron"
+  ],
+  "author": "Agani Daniel",
+  "license": "MIT",
+  "scripts": {
+    "tauri": "tauri"
+  }
+}
